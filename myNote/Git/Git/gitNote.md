@@ -79,10 +79,8 @@
             使用git init 的时候是查不出东西来的
     5、查看远程仓库
         git remote add origin
-            origin是桥梁名称，可以随意更改
     6、保证能够上传，进行远程和本地的合并
         git pull origin master
-            origin 是桥梁名称
     7、上传
         git push origin master
             第一次需要输入用户名和密码
