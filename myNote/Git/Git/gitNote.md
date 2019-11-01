@@ -90,8 +90,8 @@
 # 第二种上传流程
     1、在Github上创建一个项目
     2、克隆远程仓库到本次仓库
+        git clone git仓库的地址(SSH的地址)
     3、将需要上传的文件放入文件夹中
     4、git add .
     5、git commit -m ""
     6、git push origin master
-        origin 是桥梁名称
