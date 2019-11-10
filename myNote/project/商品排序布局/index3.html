@@ -111,8 +111,6 @@
                         }
                         this.onoff = !this.onoff;
                         newdata.forEach((item, i) => {
-                            // item.id -> 0  排完序之后的值 item.id 9
-                            //0-8   8->t:0,l:0
                             li[item.id - 1].style.left = ary[i].l + 'px';
                             li[item.id - 1].style.top = ary[i].t + 'px';
                         });
