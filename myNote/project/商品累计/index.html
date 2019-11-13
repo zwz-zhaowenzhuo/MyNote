@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body,
+		ul,
+		li {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="price.css" />
+</head>
+
+<body onselectstart="return false;">
+	<div class="wrap">
+		<div class="box">
+			<ul class="list">
+				<li>
+					<i id="add"></i>
+					<em>0</em>
+					<i id="subtract"></i>
+					<span>
+						单价：<strong>12.5元 </strong>
+						小计：<strong>0元</strong>
+					</span>
+				</li>
+				<li>
+					<i id="add"></i>
+					<em>0</em>
+					<i id="subtract"></i>
+					<span>
+						单价：<strong>10.5元 </strong>
+						小计：<strong>0元</strong>
+					</span>
+				</li>
+				<li>
+					<i id="add"></i>
+					<em>0</em>
+					<i id="subtract"></i>
+					<span>
+						单价：<strong>8.5元 </strong>
+						小计：<strong>0元</strong>
+					</span>
+				</li>
+				<li>
+					<i id="add"></i>
+					<em>0</em>
+					<i id="subtract"></i>
+					<span>
+						单价：<strong>8元 </strong>
+						小计：<strong>0元</strong>
+					</span>
+				</li>
+				<li>
+					<i id="add"></i>
+					<em>0</em>
+					<i id="subtract"></i>
+					<span>
+						单价：<strong>14.5元 </strong>
+						小计：<strong>0元</strong>
+					</span>
+				</li>
+			</ul>
+			<div class="info">
+				<span>商品公合计：<em>0</em>件</span>
+				<span>共花费了：<em>0</em>元</span>
+				<br />
+				<br />
+				<span>其中最贵的商品单价是：<em>0</em>元</span>
+			</div>
+		</div>
+	</div>
+	<script>
+		/*
+			构造函数：
+				at：单价
+				total：小计
+				factCount：数量
+			实例
+				创建5个实例并传入相对应的数量
+			构造函数.prototype
+				在构造函数的prototype中创建3个共享变量方便记录
+				sum：总数
+				lumpSum：总价
+				maxAt：最贵商品单价
+		*/
+		let add = document.getElementById("add");
+		let subtract = document.getElementById("subtract");
+
+		Calculate.prototype.getInfo = {
+			sum: 0,
+			lumpSum: 0,
+			maxAt: 0
+		}
+
+		function Calculate(at, total, factCount) {
+			this.at = at;
+			this.total = total;
+			this.factCount = factCount;
+		}
+
+		let id_1 = new Calculate();
+	</script>
+</body>
+
+</html>
