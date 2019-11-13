@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复习</title>
+</head>
+
+<body>
+    <script>
+        var str = '2019--------11';
+        console.log(str.match(/(\d+)\D+(\d+)/));
+
+        var str = '中国人，中国人，德国人，美国人，越南人，缅甸人，中国人，老挝人，菲律宾人';
+        console.log(str.replace(/中国人/g, ($0) => $0.substr(0, 2) + '神'));
+        console.log(str.replace(/中国/g,'天朝龙'));
+        console.log(str.replace(/中国(?=人)/g,'天朝龙'));
+        console.log(str.match(/(?<=中国)人/g));
+        console.log(str.match(/中国(?=人)/g));
+
+        var str = 'vctivea,vctiveb,lia,lib,diva,divb';
+        // 不要activea和不要带activeb
+        console.log(str.match(/[ld]i[a-z]{1,2}/g));
+        console.log(str.match(/(?<!vctive)(a|b)/g));
+        console.log(str.match(/vctive(a|b)/g));
+        // 只找vctive的a
+        console.log(str.match(/(?<!vctive)(a|b)/g));
+    </script>
+</body>
+
+</html>

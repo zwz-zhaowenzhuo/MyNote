@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>重写className</title>
+</head>
+
+<body>
+    <ul>
+        <li class="li clear li1">1</li>
+        <li>2</li>
+        <li class="li">3</li>
+    </ul>
+    <script>
+        let li = document.getElementsByTagName('li');
+        for (let i = 0; i < li.length; i++) {
+            console.log(li[i].className);
+            if (li[i].className === 'li') {
+                li[i].style.background = 'red';
+            }
+        }
+
+        /* function getByClass(cname) {
+            let elements = document.getElementsByTagName('*');
+            let ary = [];
+            for (let i = 0; i < elements.length; i++) {
+                let scn = elements[i].className;
+                let ary2 = scn.split(' ');
+                ary2.forEach(classname => {
+                    if (classname === cname) {
+                        ary.push(elements[i]);
+                    }
+                });
+            }
+            return ary;
+        } */
+
+        /* function getByClass(cname) {
+            let elements = document.getElementsByTagName('*');
+            let ary = [];
+
+            let re = new RegExp('\\b' + cname + '\\b');
+            for (let i = 0; i < elements.length; i++) {
+                if (re.test(elements[i].className)) {
+                    ary.push(elements[i]);
+                }
+            }
+            return ary;
+        }
+
+        let lis = getByClass('li');
+
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].style.background = 'red';
+        }
+
+        console.log(lis); */
+    </script>
+</body>
+
+</html>
