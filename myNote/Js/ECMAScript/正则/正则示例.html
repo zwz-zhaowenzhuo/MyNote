@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "ECMAS    cript";
+
+        var pattern = new RegExp("MAS");
+        console.log(pattern.test(str));
+        console.log(pattern.exec(str));
+        var pattern = new RegExp("mas", "i");
+        console.log(pattern.test(str));
+        console.log(pattern.exec(str));
+        let stri = "mas";
+        var pattern = new RegExp(stri, "i");
+        console.log(pattern.test(str));
+        console.log(pattern.exec(str));
+        var pattern = new RegExp("  ");
+        console.log(pattern.test(str));
+        console.log(pattern.exec(str));
+    </script>
+</body>
+
+</html>

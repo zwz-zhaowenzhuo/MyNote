@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM事件示例</title>
+</head>
+
+<body>
+    <i id="idName" class="className">划入会有变化哦！</i>
+    <br>
+    <i id="idClick" class="classClick">点击会发生变化哦！</i>
+    <script>
+        let setIdName = document.getElementById("idName");
+        let getIdClick = document.getElementById("idClick");
+
+        // 划入
+        setIdName.onmouseover = function () {
+            this.style.color = "#CD96CD";
+            this.innerText = "划出也会有变化哦！";
+        }
+        // 划出
+        setIdName.onmouseout = function () {
+            this.style.color = "#000000";
+            this.innerText = "划入会有变化哦！";
+        }
+
+        // 点击
+        let estimate = false;
+        let setIdClick = function () {
+            estimate = !estimate;
+            if (estimate == true) {
+                this.style.color = "#CD96CD";
+                this.innerText = "再次点击还会发生变化哦！";
+            } else if (estimate == false) {
+                this.style.color = "#000000";
+                this.innerText = "点击会发生变化哦！";
+            }
+        }
+        getIdClick.onclick = setIdClick;
+    </script>
+</body>
+
+</html>

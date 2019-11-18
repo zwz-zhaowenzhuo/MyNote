@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str2 = 'hdd82nxa89a3axdma2naejaaxaa8n2xdanja2cah2hnadhioamwajexnad8mdahiodn';
+        let obj = {};
+        let key = '';
+        let ary = [];
+
+        for (let i = 0; i < str2.length; i++) {
+            if (!ary.includes(str2[i])) {
+                let re = new RegExp(str2[i], 'g');
+                let len = str2.match(re).length;
+                obj[len] = str2[i];
+                ary.push(str2[i]);
+            } else {
+                continue;
+            }
+        }
+        let keys = Object.keys(obj);
+        let vals = Object.values(obj);
+        console.log(ary);
+        console.log(keys[keys.length - 1], vals[vals.length - 1]);
+    </script>
+</body>
+
+</html>

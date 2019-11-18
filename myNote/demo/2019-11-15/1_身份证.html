@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            身份证号码规则：
+                前1、2位数字表示：所在省份的代码；
+                第3、4位数字表示：所在城市的代码；
+                第5、6位数字表示：所在区县的代码；
+                第7-14位数字表示：出生年、月、日；
+                第15、16位数字表示：所在地的派出所的代码；
+                第17位数字表示性别：
+                    奇数表示男性，偶数表示女性；
+                第18位数字是校检码，如果效验码是10那么以x代替
+        */
+        let str = "140429199806105618";
+        var NvT = /^[1-8]\d{5}(19[2-9]\d|20[0-1]\d)(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])\d{3}(\d|X)$/.test(str);
+        console.log(NvT);
+
+        // 省、城、区编号：^[1-8]\d{5}
+        // 年：(19[2-9]\d|20[0-1]\d)
+        // 月：(0[1-9]|1[0-2])
+        // 日：(0[1-9]|[12]\d|3[01])
+        // 派出所编号+性别编号：\d{3}
+        // 效验码：(\d|X)$
+    </script>
+</body>
+
+</html>
