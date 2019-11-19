@@ -10,8 +10,12 @@
 
 <body>
     <script>
-        let str = "ECMAS    cript";
+        var str = "ECMAS    cript";
 
+        // 字面量
+        console.log(/\d$/.test(str));
+
+        // 构造函数
         var pattern = new RegExp("MAS");
         console.log(pattern.test(str));
         console.log(pattern.exec(str));
