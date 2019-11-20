@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: seagreen
+        }
+
+        div {
+            position: relative;
+            padding: 30px;
+            background: salmon
+        }
+
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        span {
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td id='td'>
+                    <span id='span'>www</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    function offset(ele) {
+        let t = ele.offsetTop,
+            l = ele.offsetLeft;
+        let temp = ele.offsetParent;
+        while (temp) {
+            l += temp.offsetLeft + temp.clientLeft;
+            t += temp.offsetTop + temp.clientTop;
+            temp = temp.offsetParent;
+        }
+        return {
+            l, t
+        }
+    }
+</script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            不常用 了解一下就OK
+        */
+        var str = "js js js",
+            NvT = /js/img;
+
+        // 实例对象的内置属性
+        // 检测有没有使用修饰符 i 使用了返回true否则返回false
+        console.log(NvT.ignoreCase); // true
+        // 检测有没有使用修饰符 g 使用了返回true否则返回false
+        console.log(NvT.global); // true
+        // 检测有没有使用修饰符 m 使用了返回true否则返回false
+        console.log(NvT.multiline); // true
+        // 将正则内容转换成字符串
+        console.log(NvT.source); // js
+        // 当构造函数全局匹配时lastIndex的值为符合正则规则的字符串的下一位，再次匹配时会以lastIndex的值为起始位置开始查找，当构造函数返回null时lastIndex的值赋值为0
+        console.log(NvT.lastIndex); // 0
+
+        /* 
+            构造函数的内置属性
+                不同的浏览器实现的结果不一样，有的压根就不支持
+        */
+        var str = "js js js",
+            NvT = /(j)s/;
+        NvT.exec(str);
+        // 将待匹配的字符串中的内容原样输出 谷歌居然木有 惊了
+        console.log(RegExp.input); // "js js js"
+        console.log(RegExp.$_); // "js js js"
+        // 最近一次匹配到的内容
+        console.log(RegExp.lastMatch); // js
+        console.log(RegExp["$&"]); // js
+        // 上一次匹配左边剩余的字符
+        console.log(RegExp.leftContext); // ""
+        console.log(RegExp['$`']); // ""
+        // 上一次匹配右边剩余的字符
+        console.log(RegExp.rightContext); // " js js"
+        console.log(RegExp['$\'']); // " js js"
+        console.log(RegExp["$'"]); // " js js"
+        // 上一次匹配时的子选项（分组里的内容）
+        console.log(RegExp.lastParen); // j
+        console.log(RegExp['$+']); // j
+
+        /*
+            获取分组
+                只有$1~$9
+        */
+        console.log(RegExp.$1);
+    </script>
+</body>
+
+</html>
