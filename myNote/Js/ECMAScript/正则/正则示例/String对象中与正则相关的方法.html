@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String对象中与正则相关的方法</title>
+</head>
+
+<body>
+
+    <script>
+        var str = "javaScript Sc",
+            NvT = /Sc/,
+            NvT2 = /(S)c/,
+            NvT3 = /Sc/g,
+            NvT4 = /(S)c/g;
+        console.log(str.search(NvT)); // 4
+        console.log(str.search(NvT2)); // 4
+        console.log(str.match(NvT)); // ["Sc", index: 4, input: "javaScript Sc", groups: undefined]
+        console.log(str.match(NvT2)); // (2) ["Sc", "S", index: 4, input: "javaScript Sc", groups: undefined]
+        console.log(str.match(NvT3)); // (2) ["Sc", "Sc"]
+        console.log(str.match(NvT4)); // (2) ["Sc", "Sc"]
+    </script>
+
+</body>
+
+</html>
