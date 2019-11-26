@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html,
+body{
+    height:100%;
+    background: #E4007F;
+}
+
+span{
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 30px auto 40px;
+    border-radius: 50%;
+    background: cornsilk;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    /* 1vw = 可视窗口宽度的1% */
+    width: 25vw;
+    margin: 0 auto 45px;
+    justify-content: space-between;
+}
+
+nav:before{
+    position: absolute;
+    top:20px;
+    width: 100%;
+    height: 10px;
+    background: black;
+    display: block;
+    content: '';
+}
+
+nav > a{
+    position: relative;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid #5395b4;
+    color: cyan;
+    text-decoration: none;
+    background: black;
+}
+
+div {
+    width: 25vw;
+    height: 25vw;
+    margin: 0 auto;
+}

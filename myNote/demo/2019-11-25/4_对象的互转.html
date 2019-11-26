@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象的互转</title>
+</head>
+<script src="./jquery.js"></script>
+
+<body>
+    <div id="box"><img src="./img/emm.gif" alt=""></div>
+    <script>
+        /*
+            原生转jquery只需要包$()即可
+            box -> $(box) 就变成了jquery对象
+
+            jquery对象转原声对象
+            $box -> $box.get(0)
+            $box -> $box[0]
+        */
+        const box = document.getElementById('box');
+        const $box = $('#box');
+        // console.log(typeof($box)); // object
+        console.log($box); // jQuery.fn.init [div#box]
+
+        $(box).css({
+            width: 500,
+            height: 500,
+        });
+        // console.log($box.get(0));
+        console.log($box[0]);
+    </script>
+</body>
+
+</html>

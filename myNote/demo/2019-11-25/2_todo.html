@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tode</title>
+</head>
+<script src="./jquery.js"></script>
+
+<body>
+    <button>发送</button>
+    <input type="text">
+    <ul></ul>
+
+    <script>
+        /*
+            text 取得所有匹配元素的内容。结果是由所有匹配元素包含的文本内容组合起来的文本。这个方法对HTML和XML文档都有效。
+            :text 匹配所有的单行文本框
+            val 获得匹配元素的当前值
+            html 取得第一个匹配元素的html内容。这个函数不能用于XML文档。但可以用于XHTML文档。在一个 HTML 文档中, 我们可以使用 .html() 方法来获取任意一个元素的内容。 如果选择器匹配多于一个的元素，那么只有第一个匹配元素的 HTML 内容会被获取。
+        */
+        $(':button').click(function () {
+            let val = $(":text").val();
+            $('ul').html('<li>' + val + '</li>' + $('ul').html());
+            $(':text').val('');
+        })
+    </script>
+</body>
+
+</html>
