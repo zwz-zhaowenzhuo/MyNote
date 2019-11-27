@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>通过下标获取HTML标签</title>
+</head>
+<script src="./jquery.js"></script>
+
+<body>
+    <div id="box">有id的div 下标是：0</div>
+    <div>没有id的div 下标是：1</div>
+    <div>没有id的div 下标是：2</div>
+    <div>没有id的div 下标是：3</div>
+    <div>没有id的div 下标是：4</div>
+    <script>
+        console.log($('#box')[0]);
+        console.log($('div')[3]);
+    </script>
+</body>
+
+</html>
