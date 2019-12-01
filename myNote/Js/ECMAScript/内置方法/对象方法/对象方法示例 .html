@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var name = 'zwz';
+        var age = 21;
+        let obj = {};
+        obj.name = '赵文卓';
+        obj.getName = function (age) {
+            return [this.name, age];
+        }
+        console.log(obj.getName(22));
+
+        // call
+        console.log(obj.getName.call(window, 22));
+
+
+        // apply
+        console.log(obj.getName.apply(window, [22]));
+    </script>
+</body>
+
+</html>
