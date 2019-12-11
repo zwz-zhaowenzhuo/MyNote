@@ -13,6 +13,12 @@
     onfoucs：获得焦点时触发
     onblur：失去焦点时触发
     onchange：域的内容改变时发生
+    onsubmit：表单中确认按钮被点击时发生
+    onmousedown：鼠标按钮在元素上按下时触发
+    onmousemove:在鼠标指针移动时发生
+    onmouseup：在元素上松开鼠标按钮时触发
+    onresize：当调整浏览器窗口的大小时触发
+    onscroll：拖动滚动条时触发
 
 
 # DOM0级事件

@@ -1,4 +1,5 @@
-# DOM
+# DOM(Document Object Model)
+> 文档对象模型
 
     获取/修改DOM属性时可以使用   DOM对象.属性，但是class比较特殊需要使用className来获取
 
